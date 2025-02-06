@@ -7,6 +7,17 @@ class person():
         else:
             return False
 
+    @classmethod
+    def verify_weight(cls, weight):
+        if isinstance(weight, int):
+            return True
+        else:
+            return False
+
+    @classmethod
+    def verify_fio(cls, fio):
+        return len(fio.split()) == 3
+
     def show_weight(self):
         return self.__weight
 
